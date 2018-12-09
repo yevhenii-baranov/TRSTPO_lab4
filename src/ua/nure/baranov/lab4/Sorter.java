@@ -2,8 +2,6 @@ package ua.nure.baranov.lab4;
 
 /**
  * Interface for classes which are used to perform sorting of double array.
- *
- * @author Yevhenii Baranov
  */
 public interface Sorter {
 
