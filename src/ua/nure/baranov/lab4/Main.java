@@ -11,12 +11,26 @@ public class Main {
         double[] arr = {5, 7, 2, 14, 121, 256, 134, 2005, 3, 2018};
 
         Sorter serial = new SerialOddEvenSorter();
+        long startSerialTime = System.nanoTime();
         double[] result = serial.sort(arr);
+        long endSerialTime = System.nanoTime();
 
-        System.out.println(Arrays.equals(arr, result));
+
+        System.out.print("With serial sorting: ");
         System.out.println(Arrays.toString(result));
+        System.out.println("Serial sort took " + (endSerialTime - startSerialTime)
+                + " nanoseconds");
+        System.out.println();
 
-        //omp parallel
-        System.out.println("I have nothing to do");
+
+        Sorter parallel = new ParallelOddEvenSorter();
+        long startParallelTime = System.nanoTime();
+        double[] parallelResult = parallel.sort(arr);
+        long endParallelTime = System.nanoTime();
+
+        System.out.print("With parallel sorting: ");
+        System.out.println(Arrays.toString(parallelResult));
+        System.out.println("Parallel sort took " + (endParallelTime - startParallelTime)
+                + " nanoseconds");
     }
 }
