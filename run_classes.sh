@@ -1,3 +1,3 @@
 #!/bin/bash
 cd result
-java ua.nure.baranov.lab4.Main
+java ua.nure.baranov.lab4.Sorter

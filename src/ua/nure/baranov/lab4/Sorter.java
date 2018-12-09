@@ -1,6 +1,6 @@
 package ua.nure.baranov.lab4;
 
-public class Main {
+public class Sorter {
 
     public static void main(String[] args) {
 
